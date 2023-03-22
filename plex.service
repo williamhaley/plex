@@ -1,0 +1,10 @@
+[Unit]
+Description=plex
+RequiresMountsFor=/srv/plex/Plex
+
+[Service]
+ExecStart=plex.sh
+ExecStop=docker stop plex
+
+[Install]
+WantedBy=multi-user.target
